@@ -1,24 +1,39 @@
 # micro-run
 
-*Press F5 to save and run the current file, F12 to make, F9 to make in background*
-
-F12 compiles your project even if Makefile is in a higher directory. It goes up (cd ..) until it finds make file or is at root directory.
-
-F9 runs 'make' in background, allowing you to keep editing while your project compiles.
+Save, run and compile your projects more efficiently without leaving the editor.
 
 ![micro-run screenshot - press F5 to run current file](./assets/micro-run.png)
 
 Micro run is a plugin for Micro editor.
 
-F5 save & run supports Go, Go test, Python 3, Lua and executable files.
+---
 
-As an extra feature, micro-run can run any script that's marked as executable - in any language. In Linux, executable files are those that have 'chmod u+x foo' set and usually start with a shebang "#!/usr/bin/foo".
+## About
+
+Below is the support table for the *Save & Run* feature
+
+| Languages | Executable files |
+| :------- | :--- |
+| Go | Linux/UNIX |
+| Go Test | |
+| Python 3 | |
+| Lua | |
+
+> As an extra feature, micro-run can run any script that's marked as executable - in any language.<br>
+> In Linux/UNIX, Executable files are those that have execute and read permissions that can be assigned using
+> `chmod u+x foo` and usually have the shebang `#!/usr/bin/bar`  at the first line of the file.
 
 ## Use Case
 
 When coding, it's convenient to run the current file and see the result immediately. Especially for Go (Golang) and other languages that don't have an interactive shell (REPL), it's nice to quickly test new features by writing a short program and hitting F5.
 
 A feature for quickly running the code you are editing is common in integrated development environments (IDEs).
+
+## Keybindings
+
+- Press F5 to save and run the current file, F12 to make, F9 to make in background
+- F12 compiles your project even if Makefile is in a higher directory. It goes up (cd ..) until it finds make file or is at root directory
+- F9 runs 'make' in background, allowing you to keep editing while your project compiles
 
 ## Limitations
 
